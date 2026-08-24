@@ -27,7 +27,7 @@
 //     </div>
 //   );
 // }
-import AdminShell from "@/components/admin/AdminShell";
+import AdminShell from "../admin/AdminShell";
 
 export const dynamic = "force-dynamic";
 

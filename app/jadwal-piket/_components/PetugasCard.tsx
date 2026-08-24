@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 import { CheckCircle2 } from "lucide-react";
 import { Petugas, itemVariants } from "../types";
 
@@ -8,7 +8,7 @@ interface Props {
   person: Petugas;
   index: number;
   tugas?: string | null;
-}
+} 
 
 export default function PetugasCard({ person, index, tugas }: Props) {
   const initials = (person.nama || "P")

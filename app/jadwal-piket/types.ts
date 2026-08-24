@@ -1,3 +1,5 @@
+import { Variants } from "framer-motion";
+
 export interface Petugas {
   id: number;
   nama: string; 
@@ -24,12 +26,12 @@ export const defaultJadwalTemplate: PiketDay[] = [
 
 export const getTodayIndex = () => (new Date().getDay() + 6) % 7;
 
-export const containerVariants = {
+export const containerVariants: Variants = {
   hidden: { opacity: 0, y: 20 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } }
-} as const;
+  show: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } },
+};
 
-export const itemVariants = {
+export const itemVariants: Variants = {
   hidden: { opacity: 0, y: 15 },
   show: { opacity: 1, y: 0, transition: { duration: 0.4, ease: "easeOut" } },
 };

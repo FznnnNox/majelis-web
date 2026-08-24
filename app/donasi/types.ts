@@ -1,5 +1,3 @@
-export type Frekuensi = "Sekali" | "Harian" | "Bulanan";
-
 export interface FeaturedCampaign {
   id: number;
   nama: string;
@@ -22,9 +20,6 @@ export const PRESET_AMOUNTS = [
   { label: "Rp 1 Jt", value: 1000000 },
 ];
 
-export const FREQUENCY_OPTIONS: Frekuensi[] = ["Sekali", "Harian", "Bulanan"];
-
-/** Helper format Rupiah */
 export const formatRupiah = (val: number) => {
   return new Intl.NumberFormat("id-ID", {
     style: "currency",
@@ -33,7 +28,6 @@ export const formatRupiah = (val: number) => {
   }).format(val);
 };
 
-/** Hitung persentase progress, dibatasi maksimal 100% */
 export const calcProgress = (terkumpul: number, target: number) => {
   if (!target || target <= 0) return 0;
   return Math.min(Math.round((terkumpul / target) * 100), 100);

@@ -1,66 +1,3 @@
-// "use client";
-
-// import { ChevronDown } from "lucide-react";
-// import { PRESET_AMOUNTS } from "../types";
-
-// interface Props {
-//   selectedAmount: number;
-//   customAmount: string;
-//   onSelectPreset: (amount: number) => void;
-//   onCustomChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
-// }
-
-// export default function AmountSelector({
-//   selectedAmount,
-//   customAmount,
-//   onSelectPreset,
-//   onCustomChange,
-// }: Props) {
-//   return (
-//     <div>
-//       <label className="block text-xs font-bold text-gray-900 uppercase tracking-wider mb-3">
-//         Pilih Nominal Donasi
-//       </label>
-
-//       <div className="grid grid-cols-3 sm:grid-cols-5 gap-2.5 mb-4">
-//         {PRESET_AMOUNTS.map((preset) => {
-//           const isSelected = selectedAmount === preset.value;
-//           return (
-//             <button
-//               key={preset.value}
-//               type="button"
-//               onClick={() => onSelectPreset(preset.value)}
-//               className={`relative py-3 px-2 rounded-xl text-xs font-bold transition-all duration-200 border ${
-//                 isSelected
-//                   ? "bg-[#152e28] text-white border-[#152e28] shadow-md ring-2 ring-[#152e28]/20"
-//                   : "bg-[#f8faf9] text-gray-700 border-gray-200/80 hover:bg-gray-100"
-//               }`}
-//             >
-//               {preset.label}
-//             </button>
-//           );
-//         })}
-//       </div>
-
-//       {/* Custom Amount Field */}
-//       <div className="group relative flex items-center rounded-xl bg-[#f8faf9] px-4 py-3 border border-gray-200/80 focus-within:border-[#152e28] focus-within:ring-2 focus-within:ring-[#152e28]/10 focus-within:bg-white transition-all">
-//         <span className="text-xs font-bold text-gray-400 mr-2">Custom</span>
-//         <span className="text-xs font-black text-gray-800 mr-1.5">Rp</span>
-//         <input
-//           type="text"
-//           value={customAmount}
-//           onChange={onCustomChange}
-//           placeholder="0"
-//           className="w-full bg-transparent text-sm font-bold text-gray-900 outline-none placeholder-gray-400"
-//         />
-//         <div className="flex items-center gap-1 text-[11px] font-bold text-gray-500 bg-white px-2.5 py-1 rounded-lg border border-gray-200 shadow-2xs">
-//           <span>IDR</span>
-//           <ChevronDown className="h-3 w-3 text-gray-400" />
-//         </div>
-//       </div>
-//     </div>
-//   );
-// }
 "use client";
 
 import { PRESET_AMOUNTS } from "../types";
@@ -112,7 +49,6 @@ export default function AmountSelector({
         })}
       </div>
 
-      {/* Custom Amount Field */}
       <div
         className={`group relative flex items-center rounded-xl bg-[#f8faf9] px-4 py-3 border transition-all ${
           isCustomActive

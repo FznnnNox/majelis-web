@@ -1,13 +1,12 @@
 export type KategoriTransaksi = "Pemasukan" | "Pengeluaran";
 
-// Sesuaikan dengan struktur tabel kas_transaksi di Supabase
 export interface Transaction {
   id: number;
   tanggal: string;
   kategori: KategoriTransaksi;
   keterangan: string;
   jumlah: number;
-  murid_nama?: string; // Didapat dari join relasi
+  murid_nama?: string; 
 }
 
 export type FilterKategoriKas = "Semua" | KategoriTransaksi;

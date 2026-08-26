@@ -15,7 +15,7 @@ export default function WelcomeSection() {
             <div className="relative w-full max-w-md">
               <div className="relative h-[380px] sm:h-[460px] w-full overflow-hidden rounded-3xl shadow-2xl border-4 border-white">
                 <Image
-                  src="/assets/uzan-porto.png"
+                  src="/assets/ustad.jpg"
                   alt="Ustadz / Guru Ngaji Majelis Al-Inayah"
                   fill
                   priority

@@ -10,7 +10,7 @@ export interface StatItem {
 }
 
 export interface ActivityItem {
-  id: number;
+  id: string;
   user: string;
   action: string;
   time: string;
@@ -20,5 +20,11 @@ export interface ActivityItem {
 export interface PiketItem {
   name: string;
   role: string;
-  done: boolean;
+}
+
+export interface JadwalHariIni {
+  hari: string;
+  isLibur: boolean;
+  tugas: string | null;
+  waktu: string | null;
 }

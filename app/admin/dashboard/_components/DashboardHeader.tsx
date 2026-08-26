@@ -2,7 +2,22 @@
 
 import { Sparkles, TrendingUp } from "lucide-react";
 
+function getSapaan(): string {
+  const hour = new Date().getHours();
+  if (hour >= 4 && hour < 11) return "Selamat Pagi";
+  if (hour >= 11 && hour < 15) return "Selamat Siang";
+  if (hour >= 15 && hour < 18) return "Selamat Sore";
+  return "Selamat Malam";
+}
+
 export default function DashboardHeader() {
+  const tanggalHariIni = new Date().toLocaleDateString("id-ID", {
+    weekday: "long",
+    day: "numeric",
+    month: "long",
+    year: "numeric",
+  });
+
   return (
     <div className="relative overflow-hidden rounded-2xl sm:rounded-[28px] bg-gradient-to-r from-[#14352c] via-[#1b4338] to-[#235346] p-5 sm:p-8 text-white shadow-xl shadow-[#14352c]/10">
       <div className="absolute top-0 right-0 -mt-12 -mr-12 w-48 sm:w-64 h-48 sm:h-64 bg-white/5 rounded-full blur-3xl pointer-events-none" />
@@ -15,10 +30,10 @@ export default function DashboardHeader() {
             <span>Ringkasan Sistem Majelis</span>
           </div>
           <h1 className="text-xl sm:text-3xl font-extrabold tracking-tight">
-            Assalamu&rsquo;alaikum, Admin!
+            {getSapaan()}, Admin!
           </h1>
           <p className="text-emerald-100/70 text-xs sm:text-sm mt-1 max-w-lg leading-relaxed">
-            Berikut rekap kegiatan, status piket, dan kas Majelis Al-Inayah hari ini.
+            {tanggalHariIni} — berikut rekap kegiatan, status piket, dan kas Majelis Al-Inayah hari ini.
           </p>
         </div>
 

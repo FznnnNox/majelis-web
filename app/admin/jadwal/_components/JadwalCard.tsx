@@ -60,7 +60,7 @@ export default function JadwalCard({ item, onEdit, onDelete }: Props) {
 
             <div>
               <div className="flex items-center gap-2">
-                <h3 className="font-extrabold text-gray-900 text-lg tracking-tight group-hover:text-[#14352c] transition-colors">
+                <h3 className="font-bold text-gray-900 text-lg group-hover:text-[#14352c] transition-colors">
                   Hari {item.hari}
                 </h3>
                 {isFriday && (
@@ -69,7 +69,7 @@ export default function JadwalCard({ item, onEdit, onDelete }: Props) {
                   </span>
                 )}
               </div>
-              <p className="text-[11px] font-semibold text-gray-400 uppercase tracking-wider mt-0.5">
+              <p className="text-[11px] font-normal text-gray-400 tracking-wider mt-0.5">
                 {isFriday ? "Agenda Majelis Libur" : "Piket Kebersihan Rutin"}
               </p>
             </div>
@@ -130,9 +130,9 @@ export default function JadwalCard({ item, onEdit, onDelete }: Props) {
                   {item.petugas.map((p: any) => (
                     <div
                       key={p.id}
-                      className="inline-flex items-center gap-2 px-3 py-1.5 rounded-xl bg-emerald-50/70 border border-emerald-100/80 text-emerald-950 text-xs font-semibold shadow-2xs hover:bg-emerald-100/50 transition-colors"
+                      className="inline-flex items-center gap-2 px-3 py-1.5 rounded-xl bg-gray-50/70 border border-emerald-100/80 text-emerald-950 text-xs font-semibold shadow-2xs hover:bg-emerald-100/50 transition-colors"
                     >
-                      <div className="h-5 w-5 rounded-lg bg-[#14352c] text-emerald-300 flex items-center justify-center shrink-0 shadow-2xs overflow-hidden">
+                      <div className="h-5 w-5 rounded-lg bg-[#14352c] text-white flex items-center justify-center shrink-0 shadow-2xs overflow-hidden">
                         {p.avatar ? (
                           <img src={p.avatar} alt={p.nama} className="h-full w-full object-cover rounded-lg" />
                         ) : (

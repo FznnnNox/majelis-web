@@ -3,6 +3,8 @@ import { Variants } from "framer-motion";
 export interface Petugas {
   id: number;
   nama: string; 
+  gender?: "Laki-laki" | "Perempuan" | string;
+  tugas?: string | null;
 }
 
 export interface PiketDay {

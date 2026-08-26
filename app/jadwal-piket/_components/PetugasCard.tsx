@@ -1,7 +1,7 @@
 "use client";
 
-import { motion, Variants } from "framer-motion";
-import { CheckCircle2 } from "lucide-react";
+import { motion } from "framer-motion";
+import { CheckCircle2, User } from "lucide-react";
 import { Petugas, itemVariants } from "../types";
 
 interface Props {
@@ -11,21 +11,15 @@ interface Props {
 } 
 
 export default function PetugasCard({ person, index, tugas }: Props) {
-  const initials = (person.nama || "P")
-    .split(" ")
-    .map((n) => n[0])
-    .join("")
-    .slice(0, 2)
-    .toUpperCase();
-
   return (
     <motion.div
       variants={itemVariants}
       className="group relative flex items-center justify-between rounded-2xl bg-[#f8faf9] p-4 transition-all duration-300 hover:bg-white hover:shadow-md border border-slate-200/70"
     >
       <div className="flex items-center gap-3.5">
-        <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-[#152e28] text-sm font-bold text-amber-300 shadow-xs">
-          {initials}
+        {/* Avatar Ikon User dengan tema warna gelap */}
+        <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-[#152e28] text-white shadow-xs">
+          <User className="h-6 w-6" />
         </div>
 
         <div>

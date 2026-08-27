@@ -131,7 +131,7 @@ export default function KasModal({
                 <span>Pihak Terkait (Murid)</span>
               </label>
               <select
-                value={formData.murid_id}
+              value={formData.murid_id ?? ""}
                 onChange={(e) =>
                   onChange((prev) => ({
                     ...prev,

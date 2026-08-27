@@ -1,0 +1,32 @@
+"use client";
+
+import { useState } from "react";
+import Sidebar from "@/components/admin/Sidebar";
+import AdminNavbar from "@/components/admin/AdminNavbar";
+import { AppRole } from "@/lib/access-control";
+
+interface Props {
+  children: React.ReactNode;
+  role: AppRole;
+}
+
+export default function AdminLayoutClient({ children, role }: Props) {
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+
+  return (
+    <div className="flex min-h-screen bg-gray-50">
+      <Sidebar
+        isOpen={isSidebarOpen}
+        onClose={() => setIsSidebarOpen(false)}
+        role={role}
+      />
+
+      <div className="flex-1 flex flex-col min-w-0">
+        <AdminNavbar onMenuClick={() => setIsSidebarOpen(true)} />
+        <main className="flex-1 p-6 lg:p-8 overflow-y-auto">
+          {children}
+        </main>
+      </div>
+    </div>
+  );
+}
